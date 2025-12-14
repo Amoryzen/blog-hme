@@ -2,6 +2,9 @@
 import { request } from "@/lib/datocms"; // Import fungsi jembatan tadi
 import Link from "next/link"; // Untuk navigasi antar halaman
 
+// Revalidate halaman setiap 10 detik (ISR)
+export const revalidate = 10;
+
 // 1. Ini "Menu Pesanan" (Query GraphQL) ke DatoCMS
 const HOMEPAGE_QUERY = `
 query HomePage {
